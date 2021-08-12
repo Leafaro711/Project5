@@ -5,12 +5,12 @@ $txtclr: #737373;
 $hdrclr: #252B42;
 $btnclr: #FF7B47;
 
-@mixin flex($alignPosition: center, $row: row, ) {
+@mixin flex($dir: row,$wrap: wrap, $alignPosition: center, $justify: space-between) {
     display: flex;
-    flex-direction: $row;
-    flex-wrap: wrap;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
     align-items: $alignPosition;
-    justify-content: space-between;
+    justify-content: $justify;
 }
 
 body{
@@ -19,9 +19,8 @@ body{
     font-weight: 500;
     line-height: 1.25rem;
     font-style: normal;
-    color: #737373;
+    color: $txtclr;
     width: 100%;
-    @include flex(left);
 }
 
 h1{
@@ -29,7 +28,7 @@ h1{
     font-weight: 800;
     line-height: 5rem;
     font-style: normal;
-    color: #252B42;
+    color: $hdrclr;
 }
 
 h2{
@@ -37,7 +36,7 @@ h2{
     font-weight: 700;
     line-height: 3.5625rem;
     font-style: normal;
-    color: #252B42;
+    color: $hdrclr;
 }
 
 h3{
@@ -46,7 +45,7 @@ h3{
     font-size: 1.5rem;
     line-height: 2rem;
     letter-spacing: 0.1px;
-    color: #252B42;
+    color: $hdrclr;
 }
 
 h4{
@@ -54,13 +53,20 @@ h4{
     font-size: 1.25rem;
     line-height: 1.875rem;
     letter-spacing: 0.2px;
-    color: #737373;
+    color: $txtclr;
     flex: none;
     order: 1;
     flex-grow: 0;
     margin: 35px 0px;
 }
 
+h5{
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1px;
+    color: $hdrclr;
+}
 
 h6{
     font-weight: 600;
@@ -138,7 +144,7 @@ nav{
             &__get{
                 width: 187px;
                 height: 48px; 
-                background: #FF7B47;
+                background: $btnclr;
                 border-radius: 37px;  
                 color: white;
                 font-family: 'Montserrat';
@@ -171,4 +177,38 @@ nav{
 
 .main__wrapper{
     padding: 10%;
+    padding-bottom: 5%;
+
+    .features{
+        width: 100%;
+
+        p{
+            margin: 3% auto;
+        }
+
+        &__container{
+            @include flex;
+
+            .block{
+                width: 25%;
+                margin: 1%;
+                padding: 1%;
+                background: #FAFAFA;
+                border: 1px solid #E2E2E2;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 2px;
+
+
+                @include flex($justify: flex-start);
+
+                h6{
+                    padding-left: 5%;
+                }
+            }
+        }
+    }
+
+    .about{
+        background: #FAFAFA;
+    }
 }
