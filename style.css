@@ -106,6 +106,11 @@ body {
   font-style: normal;
   color: #737373;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: space-between;
 }
 
 h1 {
@@ -240,4 +245,8 @@ nav {
 .header__wrapper .header__inner .button__learn:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.main__wrapper {
+  padding: 10%;
 }

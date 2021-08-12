@@ -5,6 +5,14 @@ $txtclr: #737373;
 $hdrclr: #252B42;
 $btnclr: #FF7B47;
 
+@mixin flex($alignPosition: center, $row: row, ) {
+    display: flex;
+    flex-direction: $row;
+    flex-wrap: wrap;
+    align-items: $alignPosition;
+    justify-content: space-between;
+}
+
 body{
     font-family: 'Montserrat';
     font-size: .875rem;
@@ -13,6 +21,7 @@ body{
     font-style: normal;
     color: #737373;
     width: 100%;
+    @include flex(left);
 }
 
 h1{
@@ -159,3 +168,7 @@ nav{
     }
 }
 
+
+.main__wrapper{
+    padding: 10%;
+}
