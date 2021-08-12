@@ -197,8 +197,11 @@ nav{
                 border: 1px solid #E2E2E2;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
                 border-radius: 2px;
-
-
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.849);
+                }
                 @include flex($justify: flex-start);
 
                 h6{
@@ -207,8 +210,52 @@ nav{
             }
         }
     }
+}
 
-    .about{
+.about{
         background: #FAFAFA;
-    }
+        &__wrapper{
+            padding: 10%;
+            padding-bottom: 5%;
+        }
+
+        &__title{
+            text-align: center;
+            margin: 0 25%;
+            padding-bottom: 5%;
+        }
+
+        &__video{
+            @include flex;
+
+            .video{
+                border-radius: 10px;
+                width: 50%;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        &__video__info{
+                width: 40%;
+                h2, p{
+                    padding-bottom: 5%;
+                }
+                .videoCard{
+                    padding-bottom: 2%;
+                    @include flex;
+                    img{
+                        padding-right: 2%;
+                    }
+                    div{
+                        width: 85%;
+                    }
+                }
+                @include flex($dir: column, $justify: space-evenly, $alignPosition: flex-start);
+            }
+}
+
+.feedback{
+    background: #17213C;
+    height: 600px;
 }
