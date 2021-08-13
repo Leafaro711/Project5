@@ -110,15 +110,15 @@ nav{
 
 .nav-bar{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-left: 10%;
     width: 100%;
 }
 
 .nav-list{
-    width: 55%;
+    width: 40%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -215,8 +215,7 @@ nav{
 .about{
         background: #FAFAFA;
         &__wrapper{
-            padding: 10%;
-            padding-bottom: 5%;
+            padding: 5% 10%;
         }
 
         &__title{
@@ -406,4 +405,128 @@ footer{
     background: #FAFAFA;
     text-align: center;
     h6{padding: 2%;}
+}
+
+@media screen and (min-width: 360px) and (max-width: 760px){
+    .burger{display: none;}
+    nav{
+        .nav-bar, .nav-list{
+            height: 450px;
+            flex-flow: column nowrap;
+            justify-content: center;
+            font-size: 30px;
+            text-align: center;
+            padding: 0;
+            margin: 5% 0;
+            ul{
+                li{margin: auto;}
+            }
+        }
+    }
+
+    .header{
+        background-position: center;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        &__wrapper{
+            height: auto;
+            .header__inner{
+                text-align: center;
+                padding: 10% 0;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                .button__learn{
+                    width: 9.625rem;
+                }
+                h1{
+                    font-size: 2.5rem;
+                    font-size: 40px;
+                    line-height: 57px;
+                    text-align: center;
+                    letter-spacing: 0.2px;
+                }
+                h3{
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                    letter-spacing: 0.2px;
+                    color: #737373;
+                }
+            }
+        }
+    }
+    header{
+        height: auto;
+        background: #F7F7F7;
+        margin: 0;
+    }
+
+    .about__title{
+        margin: 0;
+        padding: 5%;
+    }
+    .about__video{
+        flex-direction: column;
+        &__info{
+            padding: 5% 0;
+            width: 100%;
+            h2{
+                font-size: 40px;
+                line-height: 57px;
+                letter-spacing: 0.2px;
+            }
+        }
+        .video{
+            width: 100%;
+        }
+    }
+
+    .feedback{
+        &__intro{
+            padding: 10%;
+        }
+        &__inner{
+            &__cards{
+                width: 100%;
+                flex-flow: column wrap;
+                div{
+                    width: 100%;
+                    flex-flow: row wrap;
+                }
+            }
+        }
+    }
+
+    .team__cards{
+        flex-flow: column;
+        justify-content: center;
+        .team__card{
+            margin: 5%;
+        }
+    }
+
+    .contact__info{
+        flex-flow: column wrap;
+        .contact__inner{
+            width: 100%;
+            div{width: 100%;}
+        }
+        img{width: 100%;}
+    }
+
+    .contact__form{
+        flex-flow: column;
+        img{size: 50%;}
+    }
+
+    .footer__content{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
