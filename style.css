@@ -268,7 +268,7 @@ nav {
   justify-content: space-between;
 }
 .main__wrapper .features__container .block {
-  width: 25%;
+  width: 21rem;
   margin: 1%;
   padding: 1%;
   background: #FAFAFA;
@@ -344,5 +344,194 @@ nav {
 
 .feedback {
   background: #17213C;
-  height: 600px;
+  padding-bottom: 5%;
+}
+.feedback__intro {
+  padding: 5% 35%;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+.feedback__intro h2 {
+  color: #FFFFFF;
+}
+.feedback__intro p {
+  padding: 5% 0;
+}
+.feedback__inner {
+  overflow: hidden;
+}
+.feedback__inner__cards {
+  width: 120%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.feedback__inner__cards div {
+  padding: 1%;
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.feedback__inner__cards .feedback__card {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #FFFFFF;
+}
+.feedback__inner__cards .feedback__card .stars {
+  background: #FFFFFF;
+}
+
+.wrapper {
+  padding: 5% 10%;
+}
+
+.team {
+  background: #FAFAFA;
+}
+.team__info {
+  text-align: center;
+}
+.team__info p {
+  margin: 2%;
+}
+.team__cards {
+  margin: 5% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.team__cards .team__card {
+  background: white;
+  width: 14.375rem;
+  height: 18.125rem;
+  padding: 2%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.9375rem;
+  -webkit-border-radius: 0.9375rem;
+  -moz-border-radius: 0.9375rem;
+  -ms-border-radius: 0.9375rem;
+  -o-border-radius: 0.9375rem;
+}
+.team__cards .team__card h6 {
+  color: #FF7B47;
+}
+.team__cards .team__card:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
+.contact {
+  background: #252B42;
+}
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.contact__info h2 {
+  color: white;
+}
+.contact__info .contact__inner {
+  width: 60%;
+}
+.contact__info .contact__inner div {
+  width: 60%;
+}
+.contact__info .contact__inner div p {
+  margin: 3% 0;
+}
+.contact__form {
+  display: flex;
+  background: #FFFFFF;
+}
+.contact__form form {
+  width: 100%;
+}
+.contact__form form .form__inner {
+  padding: 0 5%;
+  height: 40.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.contact__form form .form__inner .form__content {
+  width: 100%;
+}
+.contact__form form .form__inner .form__content div {
+  width: 100%;
+  padding: 10px 0;
+}
+.contact__form form .form__inner .form__content div input, .contact__form form .form__inner .form__content div select {
+  width: 100%;
+  height: 3.125rem;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #F9F9F9;
+}
+.contact__form form .form__inner button {
+  background: #FF7B47;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #FF7B47;
+  height: 3.75rem;
+  width: 100%;
+}
+.contact__form form .form__inner button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.footer .footer__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .footer__content-links {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.footer .footer__content-links .social {
+  width: 50%;
+}
+.footer .footer__content-links .social img {
+  padding: 2%;
+}
+.footer .footer__content-links .social img:hover {
+  cursor: pointer;
+}
+
+footer {
+  background: #FAFAFA;
+  text-align: center;
+}
+footer h6 {
+  padding: 2%;
 }
